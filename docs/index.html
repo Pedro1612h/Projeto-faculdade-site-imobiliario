@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone - Aluguel e Venda de Imóveis</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="Imagens/logo-localizaLar-semFundo.png" alt="Logo LocalizaLar">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="calcfinanciamento.html">Calculadora de Financiamento</a></li>
+                <li><a href="anuncio.html">Anuncie seu imovel</a></li>
+                <li><a href="contato.html">Contate um Corretor</a></li>
+            </ul>
+            <div class="corretor-btn">
+                <a href="admin.html">
+                    <img src="Imagens/pasta.png" alt="Corretor">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="filters">
+            <label for="filter">Filtrar por:</label>
+            <select id="filter">
+                <option value="none">Selecione</option>
+                <option value="price-asc">Menor preço</option>
+                <option value="price-desc">Maior preço</option>
+                <option value="launch">Lançamentos</option>
+                <option value="ready">Prontos</option>
+            </select>
+        </div>
+
+        <div class="property-listing">
+            <div class="container">
+                <!-- O carrossel será inserido aqui pelo script.js -->
+            </div>
+
+            <div id="properties" class="properties">
+                <a href="Casas/casa1.html" class="property-card" data-price="1200000" data-type="launch">
+                    <img src="Imagens/Casa1.1.webp" alt="Apartamento Luxuoso">
+                    <div class="info">
+                        <h3>Apartamento Luxuoso</h3>
+                        <p>R$ 1.200.000</p>
+                    </div>
+                </a>
+            
+                <a href="Casas/casa7.html" class="property-card" data-price="8000000" data-type="ready">
+                    <img src="Imagens/Casa2.1.webp" alt="Casa Espetacular">
+                    <div class="info">
+                        <h3>Casa Espetacular</h3>
+                        <p>R$ 8.000.000</p>
+                    </div>
+                </a>
+            
+                <a href="Casas/casa3.html" class="property-card" data-price="3000000" data-type="ready">
+                    <img src="Imagens/Casa3.1.webp" alt="Apartamento de Luxo">
+                    <div class="info">
+                        <h3>Apartamento de Luxo</h3>
+                        <p>R$ 3.000.000</p>
+                    </div>
+                </a>
+            
+                <a href="Casas/casa4.html" class="property-card" data-price="1500000" data-type="launch">
+                    <img src="Imagens/Casa4.1.webp" alt="Cobertura Maravilhosa">
+                    <div class="info">
+                        <h3>Cobertura Maravilhosa</h3>
+                        <p>R$ 1.500.000</p>
+                    </div>
+                </a>
+            
+                <a href="Casas/casa5.html" class="property-card" data-price="5000000" data-type="ready">
+                    <img src="Imagens/Casa5.1.webp" alt="Mansão Incrível">
+                    <div class="info">
+                        <h3>Mansão Incrível</h3>
+                        <p>R$ 5.000.000</p>
+                    </div>
+                </a>
+            
+                <a href="Casas/casa6.html" class="property-card" data-price="5000000" data-type="ready">
+                    <img src="Imagens/Casa6.1.webp" alt="Mansão Mais Incrível ainda">
+                    <div class="info">
+                        <h3>Mansão Mais Incrível ainda</h3>
+                        <p>R$ 20.000.000</p>
+                    </div>
+                </a>
+            </div>
+                <!-- Mais imóveis aqui -->
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 LocalizaLar. Todos os direitos reservados.</p>
+            <p>Endereço: Rua Exemplo, 123 - Cidade - Estado | Telefone: (19) 9417-1189</p>
+        </div>
+    </footer> 
+
+    <script src="script.js"></script>
+</body>
+</html>

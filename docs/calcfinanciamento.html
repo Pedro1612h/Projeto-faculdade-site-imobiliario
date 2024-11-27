@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone - Aluguel e Venda de Imóveis</title>
+    <link rel="stylesheet" href="CSS/calc.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="Imagens/logo-localizaLar-semFundo.png" alt="Logo LocalizaLar">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="calcfinanciamento.html">Calculadora de Financiamento</a></li>
+                <li><a href="anuncio.html">Anuncie seu imovel</a></li>
+                <li><a href="contato.html">Contate um Corretor</a></li>
+            </ul>
+            <div class="corretor-btn">
+                <a href="admin.html">
+                    <img src="Imagens/pasta.png" alt="Corretor">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-form">
+            <h2>Simule seu Financiamento</h2>
+            <form id="form-simulacao">
+                <div class="form-group">
+                    <label for="valor">Valor do financiamento (R$):</label>
+                    <input type="text" id="valor" placeholder="Ex: 50000" required oninput="formatarValor(event)">
+                </div>
+        
+                <div class="form-group">
+                    <label for="taxa">Taxa de juros anual (%):</label>
+                    <input type="number" id="taxa" step="0.01" placeholder="Ex: 5.5" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="parcelas">Quantidade de parcelas:</label>
+                    <input type="number" id="parcelas" placeholder="Ex: 24" min="1" required>
+                </div>
+        
+                <button type="button" onclick="calcularFinanciamento()">Calcular</button>
+            </form>
+            <p id="resultado"></p>
+        </div>
+    </main>
+
+    <script>
+        
+function calcularFinanciamento() {
+    // Obter os valores dos campos do formulário e aplicar a formatação
+    let valor = document.getElementById("valor").value.replace(/\./g, ''); // Remove os pontos antes de calcular
+    valor = parseFloat(valor.replace(",", "."));
+    
+    const taxa = parseFloat(document.getElementById("taxa").value) / 100 / 12; // Taxa mensal
+    const parcelas = parseInt(document.getElementById("parcelas").value);
+
+    // Validação básica
+    if (isNaN(valor) || isNaN(taxa) || isNaN(parcelas) || valor <= 0 || taxa <= 0 || parcelas <= 0) {
+        document.getElementById("resultado").innerText = "Por favor, insira valores válidos!";
+        return;
+    }
+
+    // Cálculo da prestação mensal
+    const prestacao = (valor * taxa) / (1 - Math.pow(1 + taxa, -parcelas));
+
+    // Formatando o valor de entrada e o resultado com separadores de milhar
+    const valorFormatado = valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    const prestacaoFormatada = prestacao.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+    // Exibir o resultado formatado
+    document.getElementById("resultado").innerText = 
+        `O valor da prestação mensal é ${prestacaoFormatada}`;
+    
+    // Também formata o valor do financiamento
+    document.getElementById("valor").value = valorFormatado.replace("R$", "").trim(); // Exibe o valor formatado no campo
+}
+
+    </script>
+
+</body>
+</html>

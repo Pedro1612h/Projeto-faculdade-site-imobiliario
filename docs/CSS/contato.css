@@ -1,0 +1,193 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('../imagens/fundo.jpg') no-repeat center center fixed; /* Caminho ajustado */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    color: #333;
+    line-height: 1.6;
+    height: 100%; /* Garante que o body ocupe toda a altura da página */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    background: rgba(75, 99, 130, 0.8); /* Fundo com 80% de opacidade */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between; /* Garante que o corretor fique na extrema direita */
+    align-items: center;
+    border-bottom: 2px solid #2a3341;
+}
+
+header .logo img {
+    width: 300px;
+    height: 80px;
+    object-fit: contain;
+}
+
+header .logo p {
+    font-size: 24px;
+    color: white;
+    margin: 0;
+}
+
+/* Navegação - Centralização dos links */
+header nav {
+    display: flex;
+    flex: 1;
+    justify-content: center; /* Centraliza os botões de navegação, exceto o corretor */
+}
+
+header nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Aumenta o espaço entre os botões */
+    align-items: center;
+}
+
+header nav .nav-links a {
+    color: #1d5983d0;
+    text-decoration: none;
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    padding: 12px 25px; /* Aumenta o padding para dar mais espaço nos botões */
+    border-radius: 5px;
+    background-color: #ffffff; /* Caixa de fundo transparente */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav .nav-links a:hover {
+    background-color: white;
+    color: #759ebc;
+}
+
+/* Alinhamento do botão corretor à direita */
+header nav .corretor-btn {
+    padding: 15px 30px;
+    background-color: rgba(0, 123, 255, 0); /* Fundo transparente */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-left: auto; /* Move o botão para a extrema direita */
+}
+
+header nav .corretor-btn img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Torna a imagem redonda */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+header nav .corretor-btn img:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente a imagem */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+}
+
+main {
+    flex: 1;
+    background: rgba(255, 255, 255, 0);
+    max-width: 1200px;
+    margin: 20px auto; /* Garantir centralização */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização do formulário */
+.contact-form {
+    margin: 30px auto;
+    padding: 20px;
+    background: #759ebcd0; /* Fundo preto com opacidade */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 600px; /* Largura máxima do formulário */
+    color: white; /* Texto branco */
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Aumentando o espaçamento entre os campos */
+    align-items: center; /* Centraliza os campos no formulário */
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%; /* Garante que os campos ocupem toda a largura do formulário */
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: #f0f0f0d0; /* Fundo branco com leve transparência */
+    color: #000; /* Texto preto */
+}
+
+.contact-form textarea {
+    resize: none; /* Impede o redimensionamento */
+    height: 120px; /* Altura padrão para o textarea */
+}
+
+.contact-form button {
+    background-color: #3f5269;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #759ebc;
+}
+
+
+/* Rodapé fixo */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    margin-top: auto; /* Faz o rodapé "grudar" na parte inferior */
+    border-top: 2px solid #2a3341;
+    position: relative; /* Define como estático para evitar sobreposição no conteúdo */
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header .logo img {
+        width: 200px;
+        height: auto;
+    }
+
+    .property-gallery .thumbnail-gallery img {
+        width: 80px;
+        height: 50px;
+    }
+}

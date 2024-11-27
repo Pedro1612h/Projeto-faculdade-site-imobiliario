@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone - Aluguel e Venda de Imóveis</title>
+    <link rel="stylesheet" href="CSS/anuncio.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="Imagens/logo-localizaLar-semFundo.png" alt="Logo LocalizaLar">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="calcfinanciamento.html">Calculadora de Financiamento</a></li>
+                <li><a href="anuncio.html">Anuncie seu imovel</a></li>
+                <li><a href="contato.html">Contate um Corretor</a></li>
+            </ul>
+            <div class="corretor-btn">
+                <a href="admin.html">
+                    <img src="Imagens/pasta.png" alt="Corretor">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="anuncio-form">
+            <div class="anuncio-form-intro">
+                <h1>Anuncie Seu Imóvel</h1>
+                <p>Preencha os campos abaixo para anunciar seu imóvel na nossa plataforma. Informações detalhadas ajudam a atrair mais interessados.</p>
+            </div>
+            <form action="anuncio.php" method="POST" enctype="multipart/form-data">
+                <!-- Dados do Imóvel -->
+                <fieldset>
+                    <div class="form-group">
+                        <label for="title">Título do Anúncio:</label>
+                        <input type="text" id="title" name="title" placeholder="Ex: Apartamento Luxuoso no Centro" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Descrição:</label>
+                        <textarea id="description" name="description" rows="5" placeholder="Descreva as características e benefícios do imóvel" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Tipo de Imóvel:</label>
+                        <select id="type" name="type" required>
+                            <option value="">Selecione</option>
+                            <option value="casa">Casa</option>
+                            <option value="apartamento">Apartamento</option>
+                            <option value="terreno">Terreno</option>
+                            <option value="comercial">Comercial</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Preço (R$):</label>
+                        <input type="number" id="price" name="price" placeholder="Ex: 500000" required>
+                    </div>
+                </fieldset>
+        
+                <!-- Localização -->
+                <fieldset>
+                    <div class="form-group">
+                        <label for="address">Endereço:</label>
+                        <input type="text" id="address" name="address" placeholder="Rua, número, bairro" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Cidade:</label>
+                        <input type="text" id="city" name="city" placeholder="Ex: São Paulo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">Estado:</label>
+                        <select id="state" name="state" required>
+                            <option value="">Selecione</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="BA">Bahia</option>
+                        </select>
+                    </div>
+                </fieldset>
+        
+                <!-- Imagens do Imóvel -->
+                <fieldset>
+                    <div class="form-group">
+                        <label for="images">Escolha imagens do imóvel:</label>
+                        <input type="file" id="images" name="images[]" accept="image/*" multiple required>
+                    </div>
+                </fieldset>
+        
+                <!-- Botão de Enviar -->
+                <div class="form-group">
+                    <button type="submit" class="btn-submit">Enviar Anúncio</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
