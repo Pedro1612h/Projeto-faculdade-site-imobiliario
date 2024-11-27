@@ -245,3 +245,30 @@ footer {
     border-radius: 8px;
     flex: 1;
 }
+
+/* Estilos para telas menores que 768px */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+
+    header .nav-links {
+        flex-direction: column; /* Empilha os links */
+        align-items: center;
+    }
+
+    header .nav-links a {
+        margin-bottom: 10px; /* Adiciona espaço entre os links */
+    }
+}
+
+/* Estilos para telas menores que 480px */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px; /* Fonte ainda menor */
+    }
+
+    header .logo img {
+        width: 150px; /* Reduz a largura do logotipo */
+    }
+}
