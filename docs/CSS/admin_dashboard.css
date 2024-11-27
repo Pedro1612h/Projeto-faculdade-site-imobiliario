@@ -1,29 +1,29 @@
-/* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo geral */
+
 body {
     font-family: 'Arial', sans-serif;
-    background: url('imagens/imagemfinal.png') no-repeat center center fixed; /* Imagem de fundo */
-    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background: url('imagens/imagemfinal.png') no-repeat center center fixed; 
+    background-size: cover; 
     color: #333;
     line-height: 1.6;
-    height: 100%;  /* Garante que o body ocupe toda a altura da página */
+    height: 100%;  
     display: flex;
     flex-direction: column;
 }
 
 /* Cabeçalho */
 header {
-    background: rgba(75, 99, 130, 0.8); /* Fundo com 80% de opacidade */
+    background: rgba(75, 99, 130, 0.8); 
     color: white;
     padding: 15px 20px;
     display: flex;
-    justify-content: space-between; /* Garante que o corretor fique na extrema direita */
+    justify-content: space-between; 
     align-items: center;
     border-bottom: 2px solid #2a3341;
 }
@@ -40,27 +40,27 @@ header .logo p {
     margin: 0;
 }
 
-/* Navegação - Centralização dos links */
+
 header nav {
     display: flex;
     flex: 1;
-    justify-content: center; /* Centraliza os botões de navegação, exceto o corretor */
+    justify-content: center; 
 }
 
 header nav .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px; /* Aumenta o espaço entre os botões */
+    gap: 30px; 
     align-items: center;
 }
 
 header nav .nav-links a {
     color: #1d5983d0;
     text-decoration: none;
-    font-size: 18px; /* Aumenta o tamanho da fonte */
-    padding: 12px 25px; /* Aumenta o padding para dar mais espaço nos botões */
+    font-size: 18px; 
+    padding: 12px 25px; 
     border-radius: 5px;
-    background-color: #ffffff; /* Caixa de fundo transparente */
+    background-color: #ffffff; 
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -69,44 +69,44 @@ header nav .nav-links a:hover {
     color: #1d5983d0;
 }
 
-/* Alinhamento do botão corretor à direita */
+
 header nav .corretor-btn {
     padding: 15px 30px;
-    background-color: rgba(0, 123, 255, 0); /* Fundo transparente */
+    background-color: rgba(0, 123, 255, 0); 
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    margin-left: auto; /* Move o botão para a extrema direita */
+    margin-left: auto; 
 }
 
 header nav .corretor-btn:hover {
     background-color: #0057b300;
 }
 
-/* Imagem do corretor */
+
 .corretor-btn img {
-    width: 80px;   /* Tamanho da imagem */
-    height: 80px;  /* Tamanho da imagem */
-    border-radius: 50%; /* Torna a imagem redonda */
+    width: 80px;   
+    height: 80px;  
+    border-radius: 50%; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
-/* Efeito de destaque na imagem do corretor */
+
 .corretor-btn img:hover {
-    transform: scale(1.1); /* Aumenta ligeiramente a imagem */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+    transform: scale(1.1); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
-/* Estilo para a caixa de texto (tooltip) */
+
 .tooltip {
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    bottom: 110%;  /* Aparece acima da imagem */
+    bottom: 110%;  
     left: 50%;
     transform: translateX(-50%);
     background-color: #333;
@@ -116,17 +116,17 @@ header nav .corretor-btn:hover {
     border-radius: 5px;
     transition: visibility 0.3s, opacity 0.3s ease-in-out;
     z-index: 1;
-    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    white-space: nowrap; 
 }
 
-/* Exibe a caixa de texto quando o mouse passa sobre a imagem */
+
 .corretor-btn:hover .tooltip {
     visibility: visible;
     opacity: 1;
 }
 
 
-/* Container principal */
+
 .container {
     background: rgba(255, 255, 255, 0.9);
     max-width: 1200px;
@@ -134,17 +134,17 @@ header nav .corretor-btn:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow-x: auto; /* Garante responsividade para tabelas grandes */
+    overflow-x: auto; 
 }
 
-/* Título */
+
 .container h1 {
     text-align: center;
     color: #2a3341;
     margin-bottom: 20px;
 }
 
-/* Tabela de Dados */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -174,7 +174,7 @@ table tr:hover {
     background-color: #e9f7ff;
 }
 
-/* Botão de Ação */
+
 button {
     background-color: #2a3341;
     color: white;
@@ -194,7 +194,7 @@ button:hover {
     background-color: #648aaf;
 }
 
-/* Rodapé */
+
 footer {
     background: rgba(75, 99, 130, 0.9);
     color: white;
@@ -208,7 +208,7 @@ footer p {
     font-size: 14px;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 20px;
